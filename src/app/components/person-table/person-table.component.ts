@@ -21,16 +21,9 @@ export class PersonTableComponent {
     email:'thanasis@aueb.gr'
   }
   isPerson():boolean {
-    if (this.personInput && 'address' in this.personInput) {
-      this.addressOReducation = this.personInput.address
-      return 'address' in this.personInput;
-    }
-  return false;
+    return this.person && 'address' in this.person;
   }
   isEPerson():boolean {
-    if(this.personInput && 'education' in this.personInput) {
-      return 'education' in this.personInput;
-    }
-    return false;
-  }
+    return this.person && 'education' in this.person;
+ }
 }
